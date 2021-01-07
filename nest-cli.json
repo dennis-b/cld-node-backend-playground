@@ -1,0 +1,39 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/api-gateway/src",
+  "monorepo": true,
+  "root": "apps/api-gateway",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+  },
+  "projects": {
+    "api-gateway": {
+      "type": "application",
+      "root": "apps/api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+      }
+    },
+    "cld-custom-actions-service": {
+      "type": "application",
+      "root": "apps/cld-custom-actions-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/cld-custom-actions-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/cld-custom-actions-service/tsconfig.app.json"
+      }
+    },
+    "cld-node-shared": {
+      "type": "library",
+      "root": "libs/cld-node-shared",
+      "entryFile": "index",
+      "sourceRoot": "libs/cld-node-shared/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/cld-node-shared/tsconfig.lib.json"
+      }
+    }
+  }
+}
